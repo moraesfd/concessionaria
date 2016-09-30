@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- WARNING: Eclipse auto-generated file.
-              Any modifications will be overwritten.
-              To include a user specific buildfile here, simply create one in the same
-              directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="concessionaria">
+
+<project basedir="." default="build" name="concessionaria">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../../Program Files/eclipseGalileo"/>
     <property name="debuglevel" value="source,lines,vars"/>
@@ -19,17 +16,28 @@
         <path refid="JUnit 3.libraryclasspath"/>
     </path>
     <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
+    	<mkdir dir="build/classes" />
+    	<mkdir dir="dist" />
     </target>
-    <target name="clean">
-        <delete dir="bin"/>
-    </target>
+	
+	<target name="compile" depends="init">
+	    <javac srcdir="src" destdir="build/classes" />
+	</target>
+
+	<target name="compress" depends="compile">
+	        <jar destfile="dist/Concessionaria.jar" basedir="build/classes" />
+	</target>
+	
+	<target name="execute" depends="compile">
+	    <java classname="br.pucpcaldas.concessionaria.controle.Main" classpath="build/classes" />
+	</target>
+	
+	<target name="clean">
+	    <delete dir="build" />
+	    <delete dir="dist" />
+	</target>
+	
+	
     <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
     <target name="build-subprojects"/>
@@ -40,23 +48,5 @@
             <classpath refid="concessionaria.classpath"/>
         </javac>
     </target>
-    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
-        <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </copy>
-        <unzip dest="${ant.library.dir}">
-            <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </unzip>
-    </target>
-    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
-        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
-        <antcall target="build"/>
-    </target>
-    <target name="Main (2)">
-        <java classname="br.pucpcaldas.concessionaria.controle.Main" failonerror="true" fork="yes">
-            <classpath refid="concessionaria.classpath"/>
-        </java>
-    </target>
+
 </project>
