@@ -41,7 +41,7 @@
 	    <mkdir dir="build/jar"/>
     	    <jar destfile="build/jar/concessionaria.jar" basedir="build/classes">
         <manifest>
-            <attribute name="Main" value="pbr.pucpcaldas.concessionaria.controle.Main"/>
+            <attribute name="Main.java" value="pbr.pucpcaldas.concessionaria.controle.Main.java"/>
         </manifest>
     </jar>
 </target>
