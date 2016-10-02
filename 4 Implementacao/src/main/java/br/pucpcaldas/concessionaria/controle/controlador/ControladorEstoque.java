@@ -45,13 +45,17 @@ public class ControladorEstoque {
 //	Método responsável por alterar informações sobre o Estoque no banco de dados
 	public boolean atualizaEstoque(Estoque estoque){
 		try {
-			organizacaoEstoque.atualizaEstoque(estoque);
+			if(estoque.getQuantidade() < 0.0){
+				return false;
+			}else{
+				organizacaoEstoque.atualizaEstoque(estoque);
+				return true;
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
-		return true;
 	}
 
 }

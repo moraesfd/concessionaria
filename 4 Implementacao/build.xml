@@ -66,10 +66,49 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="Main (2)">
-        <java classname="br.pucpcaldas.concessionaria.controle.Main" failonerror="true" fork="yes">
+    <target name="concessionaria">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteAtualizarEstoque" todir="${junit.output.dir}"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteCadastrarCliente" todir="${junit.output.dir}"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteCadastrarVendedor" todir="${junit.output.dir}"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido" todir="${junit.output.dir}"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteValidarUsuario" todir="${junit.output.dir}"/>
             <classpath refid="concessionaria.classpath"/>
-        </java>
+        </junit>
+    </target>
+    <target name="TesteAtualizarEstoque">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteAtualizarEstoque" todir="${junit.output.dir}"/>
+            <classpath refid="concessionaria.classpath"/>
+        </junit>
+    </target>
+    <target name="TesteCadastrarCliente">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteCadastrarCliente" todir="${junit.output.dir}"/>
+            <classpath refid="concessionaria.classpath"/>
+        </junit>
+    </target>
+    <target name="TesteCadastrarVendedor">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteCadastrarVendedor" todir="${junit.output.dir}"/>
+            <classpath refid="concessionaria.classpath"/>
+        </junit>
+    </target>
+    <target name="TesteInserirNovoPedido">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido" todir="${junit.output.dir}"/>
+            <classpath refid="concessionaria.classpath"/>
+        </junit>
     </target>
     <target name="TesteValidarUsuario">
         <mkdir dir="${junit.output.dir}"/>
@@ -87,13 +126,15 @@
             <classpath refid="concessionaria.classpath"/>
         </junit>
     </target>
-    <target name="TesteCadastrarCliente">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="br.pucpcaldas.concessionaria.testes.TesteCadastrarCliente" todir="${junit.output.dir}"/>
+    <target name="MainConcessionaria (2)">
+        <java classname="br.pucpcaldas.concessionaria.controle.MainConcessionaria" failonerror="true" fork="yes">
             <classpath refid="concessionaria.classpath"/>
-        </junit>
+        </java>
+    </target>
+    <target name="conf_concessionaria">
+        <java classname="br.pucpcaldas.concessionaria.controle.MainConcessionaria" failonerror="true" fork="yes">
+            <classpath refid="concessionaria.classpath"/>
+        </java>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">

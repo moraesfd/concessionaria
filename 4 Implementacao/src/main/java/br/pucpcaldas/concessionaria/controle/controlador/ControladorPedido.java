@@ -98,12 +98,24 @@ public class ControladorPedido {
 	}
 	
 //	Método responsável por inserir uma nova instância de Pedido de venda ao banco de dados
-	public void inserePedido(PedidoVenda pedido){
+	public boolean inserePedido(PedidoVenda pedido){
 		try {
-			livroPedidos.inserePedido(pedido);
+			if(getValorTotalPedidoCorrente(pedido.getIdPedidoVenda()) > 0.0){
+				if(pedido.getCliente() == null || pedido.getVendedor() == null || pedido.getCondicaoPagamento() == null || pedido.getStatusPedido() == null){
+					return false;
+				}else{
+					livroPedidos.inserePedido(pedido);
+					return true;
+				}
+			}
+			else{
+				return false;
+			}
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return false;
 		}
 	}
 

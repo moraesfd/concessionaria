@@ -11,7 +11,7 @@ import br.pucpcaldas.concessionaria.dominio.Vendedor;
 
 public class ControladorVendedores {
 	
-	private RegistroDeVendedores registroVendedores;
+	public RegistroDeVendedores registroVendedores;
 	
 	public ControladorVendedores() {
 		registroVendedores = new RegistroDeVendedores();
@@ -43,11 +43,17 @@ public class ControladorVendedores {
 	}
 	
 //	Método responsável por criar e retornar uma lista com os Vendedores cadastrados no banco de Dados
-	public List<Vendedor> getListVendedor() throws SQLException{
+	public List<Vendedor> getListVendedor(){
+		
 		List<Vendedor> lista = new ArrayList<Vendedor>();			
 		RegistroDeVendedores ctVendedores = new RegistroDeVendedores();
 		
-		lista = ctVendedores.getAll();
+		try {
+			lista = ctVendedores.getAll();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return lista;
 		
