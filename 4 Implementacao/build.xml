@@ -16,9 +16,9 @@
     </path>
     <path id="concessionaria.classpath">
         <pathelement location="bin"/>
-        <pathelement location="../../libs/iText-5.0.5.jar"/>
-        <pathelement location="../../../../../Program Files/mysql-connector-java-5.1.38/mysql-connector-java-5.1.38-bin.jar"/>
         <path refid="JUnit 4.libraryclasspath"/>
+        <pathelement location="libs/iText-5.0.5.jar"/>
+        <pathelement location="libs/mysql-connector-java-5.1.38-bin.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -84,6 +84,14 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="br.pucpcaldas.concessionaria.testes.TesteValidarUsuario" todir="${junit.output.dir}"/>
+            <classpath refid="concessionaria.classpath"/>
+        </junit>
+    </target>
+    <target name="TesteCadastrarCliente">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="br.pucpcaldas.concessionaria.testes.TesteCadastrarCliente" todir="${junit.output.dir}"/>
             <classpath refid="concessionaria.classpath"/>
         </junit>
     </target>
