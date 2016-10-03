@@ -144,4 +144,13 @@
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
+    	<target name="jar">
+        	<jar destfile="jar/concessionaria.jar">
+            	<manifest>
+              		<attribute name="Main-Class" value="br.pucpcaldas.concessionaria.controle.MainConcessionaria"/>
+              		<attribute name="Class-Path" value=". libs/junit.jar libs/org.hamcrest.core_1.1.0.v20090501071000.jar libs/iText-5.0.5.jar libs/mysql-connector-java-5.1.38-bin.jar"/>
+            	</manifest>
+            	<fileset dir="bin"/>
+        	</jar>
+	</target>   	
 </project>
