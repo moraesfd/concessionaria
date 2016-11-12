@@ -7,11 +7,13 @@ import java.util.List;
 import javax.swing.JTable;
 
 import br.pucpcaldas.concessionaria.controle.repositorio.CarteiraDeClientes;
+import br.pucpcaldas.concessionaria.controle.repositorio.CarteiraDeClientesEmMemoria;
 import br.pucpcaldas.concessionaria.dominio.Cliente;
 
 public class ControladorClientes {
 	
 	private CarteiraDeClientes carteira;
+	private CarteiraDeClientesEmMemoria carteiraEmMemoria;
 	
 	public ControladorClientes(){
 		carteira = new CarteiraDeClientes();
@@ -28,6 +30,27 @@ public class ControladorClientes {
 			Cliente cliente = new Cliente(nome.toUpperCase(), endereco.toUpperCase(), numero, bairro.toUpperCase(), municipio.toUpperCase(), uf.toUpperCase(), cep.toUpperCase(), telefone.toUpperCase(), cpf.toUpperCase());
 			try {
 				carteira.cadastraCliente(cliente);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				retorno = false;
+			}
+			retorno = true;
+		}
+		return retorno;
+	}
+	
+//	Método responsável por criar uma instância de Cliente e inserir a instância em memória
+	public boolean cadastraClienteEmMemoria(String nome, String endereco, int numero, String bairro,
+			String municipio, String uf, String cep, String telefone, String cpf){
+		boolean retorno = false;
+		if(nome.equals("") || endereco.equals("") || numero == 0 || bairro.equals("") || municipio.equals("") || 
+				uf.equals("") || cep.equals("") || telefone.equals("") || cpf.equals("")){
+			retorno = false;
+		}else{
+			Cliente cliente = new Cliente(nome.toUpperCase(), endereco.toUpperCase(), numero, bairro.toUpperCase(), municipio.toUpperCase(), uf.toUpperCase(), cep.toUpperCase(), telefone.toUpperCase(), cpf.toUpperCase());
+			try {
+				carteiraEmMemoria = new CarteiraDeClientesEmMemoria();
+				carteiraEmMemoria.cadastraClienteEmMemoria(cliente);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				retorno = false;

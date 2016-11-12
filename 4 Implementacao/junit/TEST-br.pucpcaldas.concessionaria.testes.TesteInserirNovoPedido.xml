@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MORAES-PC" name="br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido" skipped="0" tests="2" time="0.417" timestamp="2016-10-02T16:08:51">
+<testsuite errors="0" failures="0" hostname="MORAES-PC" name="br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido" skipped="0" tests="2" time="0.057" timestamp="2016-11-12T16:23:46">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="env.USERDOMAIN_ROAMINGPROFILE" value="MORAES-PC" />
@@ -71,13 +71,13 @@
     <property name="env.SESSIONNAME" value="Console" />
     <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files (x86)/Java/jre7/bin/client;C:/Program Files (x86)/Java/jre7/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jre7\bin;C:\opencv\build\java\x64;C:\opencv\build\java\x86;C:\Program Files\MATLAB\R2016a\runtime\win64;C:\Program Files\MATLAB\R2016a\bin;C:\Program Files\MATLAB\R2016a\polyspace\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\Doctrine extensions for PHP\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Bazaar;C:\Program Files\Git\bin;C:\Users\Felipe\AppData\Local\Programs\Python\Python35-32\Scripts\;C:\Users\Felipe\AppData\Local\Programs\Python\Python35-32\;C:\altera\15.0\modelsim_ase\win32aloem;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;." />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files (x86)/Java/jre7/bin/client;C:/Program Files (x86)/Java/jre7/bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jre7\bin;C:\opencv\build\java\x64;C:\opencv\build\java\x86;C:\Program Files\MATLAB\R2016a\runtime\win64;C:\Program Files\MATLAB\R2016a\bin;C:\Program Files\MATLAB\R2016a\polyspace\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\Doctrine extensions for PHP\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Bazaar;C:\Program Files\Git\bin;C:\Users\Felipe\AppData\Local\Programs\Python\Python35-32\Scripts\;C:\Users\Felipe\AppData\Local\Programs\Python\Python35-32\;C:\altera\15.0\modelsim_ase\win32aloem;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;." />
     <property name="env.NUMBER_OF_PROCESSORS" value="4" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Felipe\Documents\EclipseProjects\concessionaria\junit\TEST-br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido.xml crashfile=C:\Users\Felipe\Documents\EclipseProjects\concessionaria\junitvmwatcher5113391361104458004.properties propsfile=C:\Users\Felipe\Documents\EclipseProjects\concessionaria\junit6272119048417269501.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Felipe\Documents\EclipseProjects\concessionaria\junit\TEST-br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido.xml crashfile=C:\Users\Felipe\Documents\EclipseProjects\concessionaria\junitvmwatcher4934687159488297497.properties propsfile=C:\Users\Felipe\Documents\EclipseProjects\concessionaria\junit1556067538784596764.properties" />
     <property name="java.class.path" value="C:\Users\Felipe\Documents\EclipseProjects\concessionaria\bin;C:\Program Files\eclipseGalileo\plugins\org.junit4_4.5.0.v20090824\junit.jar;C:\Program Files\eclipseGalileo\plugins\org.hamcrest.core_1.1.0.v20090501071000.jar;C:\Users\Felipe\Documents\EclipseProjects\concessionaria\libs\iText-5.0.5.jar;C:\Users\Felipe\Documents\EclipseProjects\concessionaria\libs\mysql-connector-java-5.1.38-bin.jar;C:\Program Files\eclipseGalileo\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-launcher.jar;C:\Program Files\eclipseGalileo\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar;C:\Program Files\eclipseGalileo\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit.jar;C:\Program Files\eclipseGalileo\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit4.jar" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="env.LOGONSERVER" value="\\MORAES-PC" />
@@ -104,7 +104,7 @@
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
     <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
-    <property name="env.Path" value="C:/Program Files (x86)/Java/jre7/bin/client;C:/Program Files (x86)/Java/jre7/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jre7\bin;C:\opencv\build\java\x64;C:\opencv\build\java\x86;C:\Program Files\MATLAB\R2016a\runtime\win64;C:\Program Files\MATLAB\R2016a\bin;C:\Program Files\MATLAB\R2016a\polyspace\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\Doctrine extensions for PHP\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Bazaar;C:\Program Files\Git\bin;C:\Users\Felipe\AppData\Local\Programs\Python\Python35-32\Scripts\;C:\Users\Felipe\AppData\Local\Programs\Python\Python35-32\;C:\altera\15.0\modelsim_ase\win32aloem;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;" />
+    <property name="env.Path" value="C:/Program Files (x86)/Java/jre7/bin/client;C:/Program Files (x86)/Java/jre7/bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jre7\bin;C:\opencv\build\java\x64;C:\opencv\build\java\x86;C:\Program Files\MATLAB\R2016a\runtime\win64;C:\Program Files\MATLAB\R2016a\bin;C:\Program Files\MATLAB\R2016a\polyspace\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\Doctrine extensions for PHP\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Bazaar;C:\Program Files\Git\bin;C:\Users\Felipe\AppData\Local\Programs\Python\Python35-32\Scripts\;C:\Users\Felipe\AppData\Local\Programs\Python\Python35-32\;C:\altera\15.0\modelsim_ase\win32aloem;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;" />
     <property name="basedir" value="C:\Users\Felipe\Documents\EclipseProjects\concessionaria" />
     <property name="ant.java.version" value="1.7" />
     <property name="ant.core.lib" value="C:\Program Files\eclipseGalileo\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar" />
@@ -120,84 +120,8 @@
     <property name="env.VBOX_MSI_INSTALL_PATH" value="C:\Program Files\Oracle\VirtualBox\" />
     <property name="env.PROCESSOR_LEVEL" value="6" />
   </properties>
-  <testcase classname="br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido" name="testaInserirNovoPedidoCompleto" time="0.32" />
-  <testcase classname="br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido" name="testaInserirNovoPedidoFaltandoInformacoes" time="0.05" />
-  <system-out><![CDATA[Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-Conectado - Connection Manager
-Host: localhost Banco: concessionaria
-Fechou conexao MySQL - ConnectionManager!!
-]]></system-out>
-  <system-err><![CDATA[Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Sun Oct 02 13:08:52 BRT 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-]]></system-err>
+  <testcase classname="br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido" name="testaInserirNovoPedidoFaltandoInformacoes" time="0.009" />
+  <testcase classname="br.pucpcaldas.concessionaria.testes.TesteInserirNovoPedido" name="testaInserirNovoPedidoCompleto" time="0.002" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

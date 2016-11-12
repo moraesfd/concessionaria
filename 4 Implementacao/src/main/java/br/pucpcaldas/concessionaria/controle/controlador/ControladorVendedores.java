@@ -7,11 +7,13 @@ import java.util.List;
 import javax.swing.JTable;
 
 import br.pucpcaldas.concessionaria.controle.repositorio.RegistroDeVendedores;
+import br.pucpcaldas.concessionaria.controle.repositorio.RegistroDeVendedoresEmMemoria;
 import br.pucpcaldas.concessionaria.dominio.Vendedor;
 
 public class ControladorVendedores {
 	
-	public RegistroDeVendedores registroVendedores;
+	private RegistroDeVendedores registroVendedores;
+	private RegistroDeVendedoresEmMemoria vendedoresEmMemoria;
 	
 	public ControladorVendedores() {
 		registroVendedores = new RegistroDeVendedores();
@@ -26,6 +28,25 @@ public class ControladorVendedores {
 			Vendedor vendedor = new Vendedor(nome.toUpperCase(), comissao);
 			try {
 				registroVendedores.cadastraVendedor(vendedor);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				retorno = false;
+			}
+			retorno = true;
+		}
+		return retorno;
+	}
+	
+//	Método responsável por criar e inserir uma nova instância do Vendedor em memória
+	public boolean cadastraVendedorEmMemoria(String nome, double comissao){
+		boolean retorno = false;
+		if(nome.equals("") || comissao == 0.0){
+			retorno = false;
+		}else{
+			Vendedor vendedor = new Vendedor(nome.toUpperCase(), comissao);
+			try {
+				vendedoresEmMemoria = new RegistroDeVendedoresEmMemoria();
+				vendedoresEmMemoria.cadastraVendedorEmMemoria(vendedor);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				retorno = false;

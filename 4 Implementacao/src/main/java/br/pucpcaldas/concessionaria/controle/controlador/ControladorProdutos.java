@@ -7,6 +7,7 @@ import java.util.List;
 import javax.swing.JTable;
 
 import br.pucpcaldas.concessionaria.controle.repositorio.CatalogoDeProdutos;
+import br.pucpcaldas.concessionaria.controle.repositorio.CatalogoDeProdutosEmMemoria;
 import br.pucpcaldas.concessionaria.dominio.Adicional;
 import br.pucpcaldas.concessionaria.dominio.Cor;
 import br.pucpcaldas.concessionaria.dominio.Produto;
@@ -14,6 +15,7 @@ import br.pucpcaldas.concessionaria.dominio.Produto;
 public class ControladorProdutos {
 	
 	private CatalogoDeProdutos catalogo;
+	private CatalogoDeProdutosEmMemoria catalogoMemoria;
 	private List<Cor> listaCores = null;  //  @jve:decl-index=0:
 	private List<Adicional> listaAdicionais = null;
 	
@@ -47,6 +49,27 @@ public class ControladorProdutos {
 			Produto produto2 = new Produto(produto.toUpperCase(), descricao.toUpperCase(), peso, cor, adicional, valorUnitario);
 			try {
 				catalogo.cadastraProduto(produto2);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				retorno = false;
+			}
+			retorno = true;
+		}
+		return retorno;
+	}
+	
+//	Método responsável por criar e inserir uma nova instância do Produto em memória
+	public boolean cadastrarProdutoEmMemoria(int idProduto, String produto, String descricao, double peso, Cor cor,
+			Adicional adicional, double valorUnitario){
+		boolean retorno = false;
+		if(idProduto <= 0 || produto.equals("") || descricao.equals("") || peso == 0.0 || cor == null || adicional == null || 
+				valorUnitario == 0.0){
+			retorno = false;
+		}else{
+			Produto produto2 = new Produto(produto.toUpperCase(), descricao.toUpperCase(), peso, cor, adicional, valorUnitario);
+			try {
+				catalogoMemoria = new CatalogoDeProdutosEmMemoria();
+				catalogoMemoria.cadastraProduto(produto2);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				retorno = false;
@@ -117,6 +140,21 @@ public class ControladorProdutos {
 		}
 		return id;
 	}
+	
+//	Método responsável por retornar o ID do último Produto cadastrado em memória
+	public int getIdUltimoProdutoCadastradoEmMemoria(){
+		int id = 0;
+		try {
+			catalogoMemoria = new CatalogoDeProdutosEmMemoria();
+			id = catalogoMemoria.getIdUltimoProdutoCadastrado();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return id;
+	}
+
+	
 //	Método responsável por criar e retornar uma lista com os Pedidos cadastrados no banco de Dados
 	public List<Produto> getListaProdutos(){
 		List<Produto> listaProdutos = null;

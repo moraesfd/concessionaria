@@ -12,12 +12,20 @@ public class TesteValidarUsuario {
 	
 	@Test
 	public void testaUsuarioExistente(){
-		Assert.assertEquals(true, controladorUsuario.validaUsuario("teste", "teste"));
+		cadastrarUsuariosParaTeste();
+		Assert.assertEquals(true, controladorUsuario.validaUsuarioEmMemória("teste", "teste"));
 	}
 	
 	@Test
 	public void testaUsuarioInexistente(){
-		Assert.assertEquals(false, controladorUsuario.validaUsuario("bbb", "bbb"));
+		cadastrarUsuariosParaTeste();
+		Assert.assertEquals(false, controladorUsuario.validaUsuarioEmMemória("bbb", "bbb"));
+	}
+	
+	public void cadastrarUsuariosParaTeste(){
+		controladorUsuario.cadastraUsuarioEmMemoria("teste", "teste", "teste");
+		controladorUsuario.cadastraUsuarioEmMemoria("teste1", "123", "teste1");
+		controladorUsuario.cadastraUsuarioEmMemoria("teste2", "321", "teste2");
 	}
 
 }

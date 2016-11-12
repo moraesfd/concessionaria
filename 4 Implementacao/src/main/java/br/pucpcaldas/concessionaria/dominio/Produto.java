@@ -22,6 +22,18 @@ public class Produto {
 		this.valorUnitario = valorUnitario;
 	}
 	
+	public Produto(int idProduto, String produto, String descricao, double peso, Cor cor,
+			Adicional adicional, double valorUnitario) {
+		super();
+		this.idProduto = idProduto;
+		this.produto = produto;
+		this.descricao = descricao;
+		this.peso = peso;
+		this.cor = cor;
+		this.adicional = adicional;
+		this.valorUnitario = valorUnitario;
+	}
+	
 	
 
 	public Produto(int idProduto, String produto) {
