@@ -1,0 +1,122 @@
+﻿CREATE DATABASE `concessionaria` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+DROP TABLE IF EXISTS `concessionaria`.`adicional`;
+CREATE TABLE  `concessionaria`.`adicional` (
+  `idAdicional` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `adicional` varchar(45) NOT NULL,
+  `status` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idAdicional`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`cliente`;
+CREATE TABLE  `concessionaria`.`cliente` (
+  `idCliente` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
+  `endereco` varchar(45) NOT NULL,
+  `numero` varchar(10) NOT NULL,
+  `bairro` varchar(45) NOT NULL,
+  `municipio` varchar(45) NOT NULL,
+  `uf` varchar(45) NOT NULL,
+  `cep` varchar(45) NOT NULL,
+  `telefone` varchar(45) NOT NULL,
+  `status` int(10) unsigned NOT NULL DEFAULT '1',
+  `cpf` varchar(45) NOT NULL,
+  PRIMARY KEY (`idCliente`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`condicaopagamento`;
+CREATE TABLE  `concessionaria`.`condicaopagamento` (
+  `idCondPagto` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(45) NOT NULL,
+  `status` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idCondPagto`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`cor`;
+CREATE TABLE  `concessionaria`.`cor` (
+  `idCor` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `cor` varchar(45) NOT NULL,
+  `status` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idCor`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`estoque`;
+CREATE TABLE  `concessionaria`.`estoque` (
+  `idProduto` int(10) unsigned NOT NULL,
+  `quantidade` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`idProduto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`fornecedor`;
+CREATE TABLE  `concessionaria`.`fornecedor` (
+  `idFornecedor` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `razaoSocial` varchar(45) NOT NULL,
+  `municipio` varchar(45) NOT NULL,
+  `uf` varchar(45) NOT NULL,
+  `pais` varchar(45) NOT NULL,
+  `ultimaCompra` datetime NOT NULL,
+  `status` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idFornecedor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`itempedidovenda`;
+CREATE TABLE  `concessionaria`.`itempedidovenda` (
+  `idPedidoVenda` int(10) unsigned NOT NULL,
+  `idProduto` int(10) unsigned NOT NULL,
+  `quantidade` int(10) unsigned NOT NULL,
+  `data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` int(10) unsigned NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`pedidovenda`;
+CREATE TABLE  `concessionaria`.`pedidovenda` (
+  `idPedidoVenda` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idCliente` int(10) unsigned NOT NULL,
+  `idVendedor` int(10) unsigned NOT NULL,
+  `idCondPagto` int(10) unsigned NOT NULL,
+  `idStatusPedido` int(10) unsigned NOT NULL,
+  `dataEntrada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `porcenDesconto` double NOT NULL,
+  `total` double NOT NULL,
+  PRIMARY KEY (`idPedidoVenda`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`produto`;
+CREATE TABLE  `concessionaria`.`produto` (
+  `idProduto` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `produto` varchar(45) NOT NULL,
+  `descricao` varchar(45) NOT NULL,
+  `peso` double NOT NULL,
+  `idCor` int(10) unsigned NOT NULL,
+  `idAdicional` int(10) unsigned NOT NULL,
+  `valorUnitario` double NOT NULL,
+  `disponivel` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idProduto`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`statuspedido`;
+CREATE TABLE  `concessionaria`.`statuspedido` (
+  `idStatusPedido` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(45) NOT NULL,
+  `status` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idStatusPedido`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`usuario`;
+CREATE TABLE  `concessionaria`.`usuario` (
+  `idUsuario` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `login` varchar(45) NOT NULL,
+  `senha` varchar(45) NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `status` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `concessionaria`.`vendedor`;
+CREATE TABLE  `concessionaria`.`vendedor` (
+  `idVendedor` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
+  `comissao` double NOT NULL,
+  `status` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idVendedor`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
